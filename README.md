@@ -174,6 +174,9 @@ Names are title-cased for database matching with fuzzy LIKE search.
 │   ├── style.css          # Stylesheet
 │   └── chat.js            # Chat interface JavaScript
 ├── requirements.txt        # Required libariries
+├── 1.png                   # Sample screenshot
+├── 2.png                  # Sample screenshot
+├── 3.png                  # Sample screenshot
 └── README.md              # This file
 ```
 
@@ -227,14 +230,6 @@ See `Database.pdf` for complete schema and sample data.
 **No Data Returned**: Check that sample data exists in database tables
 
 **Session Errors**: Ensure `SESSION_SECRET` environment variable is set
-
-## env file structure 
-DB_HOST=localhost
-DB_PORT=3306(by default)
-DB_USER=user name
-DB_PASSWORD=your password
-DB_NAME=Database name
-SESSION_SECRET=secret_key
 
 ## License
 
