@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Agent Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dashboard-page">
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Agent Assistant</h1>
+            <div class="user-info">
+                <span class="user-name">{{ user_name }}</span>
+                <button id="logoutBtn" class="btn-secondary">Logout</button>
+            </div>
+        </header>
+        
+        <div class="chat-container">
+            <div id="chatMessages" class="chat-messages">
+                <div class="welcome-message">
+                    <h2>Welcome to your Agent Assistant!</h2>
+                    <p>I can help you with:</p>
+                    <ul>
+                        <li><strong>Payroll queries:</strong> "Show me payroll for this week", "What's the payroll for last month?", "Payroll from 2025-08-01 to 2025-08-31"</li>
+                        <li><strong>Customer orders:</strong> "Find orders for Alice Johnson", "Show me customer John Doe's projects"</li>
+                    </ul>
+                    <p>Ask me anything!</p>
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <form id="chatForm">
+                    <input 
+                        type="text" 
+                        id="chatInput" 
+                        placeholder="Ask about payroll or customer orders..." 
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" class="btn-send">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
